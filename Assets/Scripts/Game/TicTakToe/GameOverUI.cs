@@ -23,6 +23,7 @@ public class GameOverUI : MonoBehaviour
     private void RestartGame()
     {
         GameManager.Instance.RestartGame();
+        GameManager.Instance.RestartGame();
         GameOverPanel.SetActive(false);
     }
     private void GoHome()
