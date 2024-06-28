@@ -41,7 +41,6 @@ public class Buttons : MonoBehaviour
     {
         if (!IsWin)
         {
-            Debug.Log(GameManager.Instance.Player);
             if (GameManager.Instance.Player == 1 && field[x, y] == 0)
             {
                 field[x, y] = 1;
@@ -110,7 +109,30 @@ public class Buttons : MonoBehaviour
         {
             return (field[0, 2], 3, 3);
         }
-
+        bool breakCycle = false;
+        for(int i = 0; i < 3; i++)
+        {
+            for(int j = 0; j < 3; j++)
+            {
+                if(field[i, j] == 0)
+                {
+                    breakCycle = true;
+                    break;
+                }
+        
+            }
+            Debug.Log(field[i, 0] + " " + field[i, 1] + " " + field[i, 2]);
+            if (breakCycle) {  break; } else if(!breakCycle && i == 2)
+            {
+                return (2, 4, 4);
+            }
+            
+        }
+        if (!breakCycle)
+        {
+            
+            
+        }
         return (-1, -1, -1);
     }
     private void SetField()
