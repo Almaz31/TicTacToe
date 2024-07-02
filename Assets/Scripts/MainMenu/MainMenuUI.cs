@@ -9,26 +9,51 @@ public class MainMenuUI : MonoBehaviour
 {
     [SerializeField] private GameObject PlayUI;
     [SerializeField] private GameObject ChooseGameUI;
+    [SerializeField] private GameObject DonateUI;
 
     [SerializeField] private Button PlayTicTakToe;
     [SerializeField] private Button Play5InRow;
     [SerializeField] private Button PlayStar;
+
+    [SerializeField] private Button PlayButton;
+    [SerializeField] private Button BackButton;
 
     private void Start()
     {
         PlayTicTakToe.onClick.AddListener(() => { StartTicTakToe(); });
         Play5InRow.onClick.AddListener(() => { Start5InRow(); });
         PlayStar.onClick.AddListener(() => { StartStar(); });
+
+        PlayButton.onClick.AddListener(() => { ShowChooseGameUI(); });
+        BackButton.onClick.AddListener(() => { BackToMenuUI(); });
+
+        BackToMenuUI();
+    }
+
+    private void BackToMenuUI()
+    {
+        PlayUI.SetActive(true);
+        ChooseGameUI.SetActive(false);
+    }
+
+    private void ShowChooseGameUI()
+    {
+        PlayUI.SetActive(false);
+        ChooseGameUI.SetActive(true);
+    }
+    private void ShowDonateUI()
+    {
+        DonateUI.SetActive(true);
     }
 
     private void StartStar()
     {
-        Debug.Log("Donate for inspire");
+        ShowDonateUI();
     }
 
     private void Start5InRow()
     {
-        Debug.Log("Donate for inspire");
+        ShowDonateUI();
     }
 
     private void StartTicTakToe()
