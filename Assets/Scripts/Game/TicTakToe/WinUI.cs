@@ -64,14 +64,19 @@ public class WinUI : MonoBehaviour
         else if (type == 3)
         {
             SecondDiagonal.SetActive(true);
-        } 
-        GameOverUI.instance.ShowGameOverUI();
-        PlayerWinText.GetComponent<TextMeshProUGUI>().text = "Player " + player + " wins";
+        }
+        if (type != 4)
+        {
+            GameOverUI.instance.ShowGameOverUI();
+            PlayerWinText.GetComponent<TextMeshProUGUI>().text = "Player " + player + " wins";
+            GameManager.Instance.PlayerWin(player);
+        }
         if (type == 4)
         {
             GameOverUI.instance.ShowGameOverUI();
             PlayerWinText.GetComponent<TextMeshProUGUI>().text = "Draw";
         }
+
         PlayerWinText.SetActive(true);
     }
     public void HideLines()

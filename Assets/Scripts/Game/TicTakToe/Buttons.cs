@@ -82,6 +82,7 @@ public class Buttons : MonoBehaviour
         {
             IsWin = true;
             WinUI.Instance.ShowWinLine(result.Item1, result.Item2, result.Item3);
+            GameUI.instance.Win();
         }
     }
 

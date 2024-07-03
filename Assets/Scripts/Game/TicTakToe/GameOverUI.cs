@@ -28,6 +28,7 @@ public class GameOverUI : MonoBehaviour
     }
     private void GoHome()
     {
+        GameManager.Instance.QiutGame();
         SceneManager.LoadScene(0);
         GameOverPanel.SetActive(false);
     }

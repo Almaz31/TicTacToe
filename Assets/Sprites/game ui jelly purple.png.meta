@@ -260,10 +260,10 @@ TextureImporter:
       name: game ui jelly purple_7
       rect:
         serializedVersion: 2
-        x: 3186
-        y: 3710
-        width: 460
-        height: 453
+        x: 3215
+        y: 3724
+        width: 417
+        height: 411
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -281,10 +281,10 @@ TextureImporter:
       name: game ui jelly purple_8
       rect:
         serializedVersion: 2
-        x: 3738
-        y: 3703
-        width: 445
-        height: 496
+        x: 3752
+        y: 3735
+        width: 415
+        height: 415
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -365,10 +365,10 @@ TextureImporter:
       name: game ui jelly purple_12
       rect:
         serializedVersion: 2
-        x: 3745
-        y: 3201
-        width: 495
-        height: 453
+        x: 3796
+        y: 3216
+        width: 418
+        height: 413
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
