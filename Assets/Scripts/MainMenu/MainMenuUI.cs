@@ -17,6 +17,8 @@ public class MainMenuUI : MonoBehaviour
 
     [SerializeField] private Button PlayButton;
     [SerializeField] private Button BackButton;
+    [SerializeField] private Button SupportButton;
+    [SerializeField] private Button QuitButton;
 
     private void Start()
     {
@@ -26,8 +28,15 @@ public class MainMenuUI : MonoBehaviour
 
         PlayButton.onClick.AddListener(() => { ShowChooseGameUI(); });
         BackButton.onClick.AddListener(() => { BackToMenuUI(); });
+        SupportButton.onClick.AddListener(() => { ShowDonateUI(); });
+        QuitButton.onClick.AddListener(() => { QuitGame(); });
 
         BackToMenuUI();
+    }
+
+    private void QuitGame()
+    {
+       Application.Quit();
     }
 
     private void BackToMenuUI()
